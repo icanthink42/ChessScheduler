@@ -88,7 +88,8 @@ for game in games:
         if game.contains_users(match.p1, match.p2) and match.time not in used_times:
             game.time = match.time
             game.day = match.day
-            used_times.append(game.time)
+            used_times.append(match.time)
+            break
 
 for game in games:
     if game.time is None:
