@@ -7,13 +7,14 @@ cfg = json.load(f)
 
 endpoints = cfg["endpoints"]
 
+
 schedules = {}
 names = []
 
 for name in endpoints:
     names.append(name)
     e = endpoints[name]
-    schedules[name] = requests.get(e).json()
+    schedules[name] = requests.get(f"https://opensheet.elk.sh/{e}/Sheet1").json()
 
 class Match:
     def __init__(self, time, day, p1, p2, priority):
