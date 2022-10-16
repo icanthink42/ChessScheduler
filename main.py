@@ -45,7 +45,7 @@ class Day:
                             out.append(Match(t, self.name, p_1["name"], p_2["name"], p_1["priority"] + p_2["priority"]))
         return out
 
-d_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+d_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 days = {}
 
 for d in d_list:
